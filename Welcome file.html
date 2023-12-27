@@ -1,0 +1,267 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome file</title>
+  <link rel="stylesheet" href="https://stackedit.io/style.css" />
+</head>
+
+<body class="stackedit">
+  <div class="stackedit__html"><h1 id="solutions-collection-edabit-algorithms">Solutions Collection: Edabit Algorithms</h1>
+<p>Hey there, I’m Luis Uribe, specializing in solutions engineering and data analysis. Here’s a set of algorithmic challenges sourced from <a href="https://edabit.com/">Edabit</a>, that I solved for practice and fun.</p>
+<p><strong>Disclaimer:</strong><br>
+As per Edabit’s policies, I’m only able to provide the title, author, and the solution to the problem listed.</p>
+<p>Thank you for taking the time to explore these solutions! For any questions or concerns (including request for removal), feel free to connect with me on <a href="https://www.linkedin.com/in/luisuribezam/">LinkedIn</a>.</p>
+<p>*<em>List last updated as of 12-26-23</em></p>
+<h2 id="algorithms-solved">Algorithms Solved</h2>
+<p><strong>Edabit Difficulty:</strong> <em>Hard</em></p>
+<hr>
+<p><strong>Disclaimer:</strong><br>
+As per Edabit’s policies, I’m only able to provide the title, author, and the solution solution I created to the problem listed.</p>
+<hr>
+<p><strong>Problem Title:</strong> Seven Boom!<br>
+<strong>Author:</strong> <a href="https://edabit.com/user/Q69qbJ2JtmQFkMXqz">Alon</a><br>
+<strong>Solution:</strong></p>
+<pre class=" language-javascript"><code class="prism  language-javascript"><span class="token keyword">function</span> <span class="token function">sevenBoom</span><span class="token punctuation">(</span>arr<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">let</span> stringConverstion <span class="token operator">=</span> arr<span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>stringConverstion<span class="token punctuation">.</span><span class="token function">includes</span><span class="token punctuation">(</span><span class="token number">7</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token string">"Boom!"</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token string">"there is no 7 in the array"</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<hr>
+<p><strong>Problem Title:</strong> Tower of Hanoi<br>
+<strong>Author:</strong> <a href="https://edabit.com/user/Akq3fQcPRgPrWfsye">Ruud Peter Boelens</a><br>
+<strong>Solution:</strong></p>
+<pre class=" language-javascript"><code class="prism  language-javascript"><span class="token keyword">function</span> <span class="token function">towerHanoi</span><span class="token punctuation">(</span>discs<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> Math<span class="token punctuation">.</span><span class="token function">pow</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span> discs<span class="token punctuation">)</span> <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<hr>
+<p><strong>Problem Title:</strong> Number of Boomerangs<br>
+<strong>Author:</strong> <a href="https://edabit.com/user/mNMQvcxKSSvqqMYCH">Helen Yu</a><br>
+<strong>Solution:</strong></p>
+<pre class=" language-javascript"><code class="prism  language-javascript"><span class="token keyword">function</span> <span class="token function">countBoomerangs</span><span class="token punctuation">(</span>arr<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">let</span> counter <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+    
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> arr<span class="token punctuation">.</span>length<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>arr<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">!==</span> arr<span class="token punctuation">[</span>i <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">&amp;&amp;</span> arr<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">===</span> arr<span class="token punctuation">[</span>i <span class="token operator">+</span> <span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            counter<span class="token operator">++</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+    
+    <span class="token keyword">return</span> counter<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<hr>
+<p><strong>Problem Title:</strong> Oddish vs. Evenish<br>
+<strong>Author:</strong> <a href="https://edabit.com/user/mNMQvcxKSSvqqMYCH">Helen Yu</a><br>
+<strong>Solution:</strong></p>
+<pre class=" language-javascript"><code class="prism  language-javascript"><span class="token keyword">function</span> <span class="token function">oddishOrEvenish</span><span class="token punctuation">(</span>num<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> strConv <span class="token operator">=</span> num<span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">const</span> words <span class="token operator">=</span> strConv<span class="token punctuation">.</span><span class="token function">split</span><span class="token punctuation">(</span><span class="token string">''</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">var</span> arrayOfNumbers <span class="token operator">=</span> words<span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span>Number<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">const</span> initialValue <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+    <span class="token keyword">const</span> sumWithInitial <span class="token operator">=</span> arrayOfNumbers<span class="token punctuation">.</span><span class="token function">reduce</span><span class="token punctuation">(</span>
+        <span class="token punctuation">(</span>previousVal<span class="token punctuation">,</span> currentVal<span class="token punctuation">)</span> <span class="token operator">=&gt;</span> previousVal <span class="token operator">+</span> currentVal<span class="token punctuation">,</span> initialValue<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>sumWithInitial <span class="token operator">%</span> <span class="token number">2</span> <span class="token operator">===</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token string">'Evenish'</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token string">'Oddish'</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<hr>
+<p><strong>Problem Title:</strong> How Many Days Between Two Dates<br>
+<strong>Author:</strong> <a href="https://edabit.com/user/Q69qbJ2JtmQFkMXqz">Alon</a><br>
+<strong>Solution:</strong></p>
+<pre class=" language-javascript"><code class="prism  language-javascript"><span class="token keyword">function</span> <span class="token function">getDays</span><span class="token punctuation">(</span>date1<span class="token punctuation">,</span> date2<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> oneDay <span class="token operator">=</span> <span class="token number">1000</span> <span class="token operator">*</span> <span class="token number">60</span> <span class="token operator">*</span> <span class="token number">60</span> <span class="token operator">*</span> <span class="token number">24</span><span class="token punctuation">;</span>
+    <span class="token keyword">const</span> start <span class="token operator">=</span> Date<span class="token punctuation">.</span><span class="token function">UTC</span><span class="token punctuation">(</span>date2<span class="token punctuation">.</span><span class="token function">getFullYear</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> date2<span class="token punctuation">.</span><span class="token function">getMonth</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> date2<span class="token punctuation">.</span><span class="token function">getDate</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">const</span> end <span class="token operator">=</span> Date<span class="token punctuation">.</span><span class="token function">UTC</span><span class="token punctuation">(</span>date1<span class="token punctuation">.</span><span class="token function">getFullYear</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> date1<span class="token punctuation">.</span><span class="token function">getMonth</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> date1<span class="token punctuation">.</span><span class="token function">getDate</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    
+    <span class="token keyword">return</span> <span class="token punctuation">(</span>start <span class="token operator">-</span> end<span class="token punctuation">)</span> <span class="token operator">/</span> oneDay<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<hr>
+<p><strong>Problem Title:</strong> Length of a Nested Array<br>
+<strong>Author:</strong> <a href="https://edabit.com/user/mNMQvcxKSSvqqMYCH">Helen Yu</a><br>
+<strong>Solution:</strong></p>
+<pre class=" language-javascript"><code class="prism  language-javascript"><span class="token keyword">function</span> <span class="token function">getLength</span><span class="token punctuation">(</span>arr<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">function</span> <span class="token function">flattenDeep</span><span class="token punctuation">(</span>arr1<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> arr1<span class="token punctuation">.</span><span class="token function">reduce</span><span class="token punctuation">(</span><span class="token punctuation">(</span>acc<span class="token punctuation">,</span> val<span class="token punctuation">)</span> <span class="token operator">=&gt;</span> Array<span class="token punctuation">.</span><span class="token function">isArray</span><span class="token punctuation">(</span>val<span class="token punctuation">)</span> <span class="token operator">?</span> acc<span class="token punctuation">.</span><span class="token function">concat</span><span class="token punctuation">(</span><span class="token function">flattenDeep</span><span class="token punctuation">(</span>val<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">:</span> acc<span class="token punctuation">.</span><span class="token function">concat</span><span class="token punctuation">(</span>val<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    
+    <span class="token keyword">return</span> <span class="token function">flattenDeep</span><span class="token punctuation">(</span>arr<span class="token punctuation">)</span><span class="token punctuation">.</span>length<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<hr>
+<p><strong>Problem Title:</strong> Up the Hill, Down the Hill<br>
+<strong>Author:</strong> <a href="https://edabit.com/user/yaL57wdXmgAZTvKfX">Isaac Pak</a><br>
+<strong>Solution:</strong></p>
+<pre class=" language-javascript"><code class="prism  language-javascript"><span class="token keyword">function</span> <span class="token function">aveSpd</span><span class="token punctuation">(</span>uphillTime<span class="token punctuation">,</span> uphillRate<span class="token punctuation">,</span> downhillRate<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token punctuation">(</span>uphillRate <span class="token operator">*</span> <span class="token punctuation">(</span>uphillTime <span class="token operator">/</span> <span class="token number">60</span><span class="token punctuation">)</span> <span class="token operator">+</span> downhillRate <span class="token operator">*</span> <span class="token punctuation">(</span>uphillTime <span class="token operator">/</span> <span class="token number">60</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">/</span> <span class="token punctuation">(</span>uphillTime <span class="token operator">/</span> <span class="token number">60</span> <span class="token operator">*</span> <span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<hr>
+<p><strong>Edabit Difficulty:</strong> <em>Intermediate/Medium</em></p>
+<hr>
+<p><strong>Disclaimer:</strong><br>
+As per Edabit’s policies, I’m only able to provide the title, author, and the solution I created to the problem listed.</p>
+<hr>
+<p><strong>Problem Title:</strong> Right Shift by Division<br>
+<strong>Author:</strong> <a href="https://edabit.com/user/a777e8chPvJkY3tKa">Deep Xavier</a><br>
+<strong>Solution:</strong></p>
+<pre class=" language-javascript"><code class="prism  language-javascript"><span class="token keyword">function</span> <span class="token function">shiftToRight</span><span class="token punctuation">(</span>x<span class="token punctuation">,</span> y<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">let</span> eq1 <span class="token operator">=</span> Math<span class="token punctuation">.</span><span class="token function">floor</span><span class="token punctuation">(</span><span class="token number">2</span> <span class="token operator">**</span> y<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">let</span> eq2 <span class="token operator">=</span> Math<span class="token punctuation">.</span><span class="token function">floor</span><span class="token punctuation">(</span>x <span class="token operator">/</span> eq1<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> eq2<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<hr>
+<p><strong>Problem Title:</strong> Perimeters with a Catch<br>
+<strong>Author:</strong> <a href="https://edabit.com/user/Nb6LYPoQP6KJZt8mz">BijogFc24</a><br>
+<strong>Solution:</strong></p>
+<pre class=" language-javascript"><code class="prism  language-javascript"><span class="token keyword">function</span> <span class="token function">perimeter</span><span class="token punctuation">(</span>l<span class="token punctuation">,</span> num<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token punctuation">(</span>l <span class="token operator">===</span> <span class="token string">'s'</span> <span class="token operator">?</span>  num <span class="token operator">*=</span> <span class="token number">4</span> <span class="token punctuation">:</span> num <span class="token operator">*=</span> <span class="token number">6.28</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<hr>
+<p><strong>Problem Title:</strong> Find the nth Tetrahedral Number<br>
+<strong>Author:</strong> <a href="https://edabit.com/user/BkPgkDQGHm66X4Qai">Matt</a><br>
+<strong>Solution:</strong></p>
+<pre class=" language-javascript"><code class="prism  language-javascript"><span class="token keyword">function</span> <span class="token function">tetra</span><span class="token punctuation">(</span>n<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token punctuation">(</span>n <span class="token operator">*</span> <span class="token punctuation">(</span>n <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token operator">*</span> <span class="token punctuation">(</span>n <span class="token operator">+</span> <span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">/</span> <span class="token number">6</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<hr>
+<p><strong>Problem Title:</strong> Concatenate Variable Number of Input Arrays<br>
+<strong>Author:</strong> <a href="https://edabit.com/user/mNMQvcxKSSvqqMYCH">Helen Yu</a><br>
+<strong>Solution:</strong></p>
+<pre class=" language-javascript"><code class="prism  language-javascript"><span class="token keyword">function</span> <span class="token function">concat</span><span class="token punctuation">(</span><span class="token operator">...</span>args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> args<span class="token punctuation">.</span><span class="token function">flat</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<hr>
+<p><strong>Problem Title:</strong> Triangular Number Sequence<br>
+<strong>Author:</strong> <a href="https://edabit.com/user/BkPgkDQGHm66X4Qai">Matt</a><br>
+<strong>Solution:</strong></p>
+<pre class=" language-javascript"><code class="prism  language-javascript"><span class="token keyword">function</span> <span class="token function">triangle</span><span class="token punctuation">(</span>n<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> n <span class="token operator">*</span> <span class="token punctuation">(</span>n <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token operator">/</span> <span class="token number">2</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<hr>
+<p><strong>Problem Title:</strong> Make a Circle with OOP<br>
+<strong>Author:</strong> <a href="https://edabit.com/user/E3bAbAjwFzekBoMGD">joe111</a><br>
+<strong>Solution:</strong></p>
+<pre class=" language-javascript"><code class="prism  language-javascript"><span class="token keyword">class</span> <span class="token class-name">Circle</span> <span class="token punctuation">{</span>
+    <span class="token function">constructor</span><span class="token punctuation">(</span>radius<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>radius <span class="token operator">=</span> radius<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    
+    <span class="token function">getArea</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> Math<span class="token punctuation">.</span>PI <span class="token operator">*</span> <span class="token keyword">this</span><span class="token punctuation">.</span>radius <span class="token operator">**</span> <span class="token number">2</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token function">getPerimeter</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token number">2</span> <span class="token operator">*</span> Math<span class="token punctuation">.</span>PI <span class="token operator">*</span> <span class="token keyword">this</span><span class="token punctuation">.</span>radius<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<hr>
+<p><strong>Problem Title:</strong> Return the Objects Keys and Values<br>
+<strong>Author:</strong> <a href="https://edabit.com/user/BkPgkDQGHm66X4Qai">Matt</a><br>
+<strong>Solution:</strong></p>
+<pre class=" language-javascript"><code class="prism  language-javascript"><span class="token keyword">function</span> <span class="token function">keysAndValues</span><span class="token punctuation">(</span>obj<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> keys <span class="token operator">=</span> Object<span class="token punctuation">.</span><span class="token function">keys</span><span class="token punctuation">(</span>obj<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">sort</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">const</span> values <span class="token operator">=</span> keys<span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span>key <span class="token operator">=&gt;</span> obj<span class="token punctuation">[</span>key<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> <span class="token punctuation">[</span>keys<span class="token punctuation">,</span> values<span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<hr>
+<p><strong>Problem Title:</strong> Integer in Range?<br>
+<strong>Author:</strong> <a href="https://edabit.com/user/BkPgkDQGHm66X4Qai">Matt</a><br>
+<strong>Solution:</strong></p>
+<pre class=" language-javascript"><code class="prism  language-javascript"><span class="token keyword">function</span> <span class="token function">intWithinBounds</span><span class="token punctuation">(</span>n<span class="token punctuation">,</span> lower<span class="token punctuation">,</span> upper<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> Number<span class="token punctuation">.</span><span class="token function">isInteger</span><span class="token punctuation">(</span>n<span class="token punctuation">)</span> <span class="token operator">&amp;&amp;</span> n <span class="token operator">&gt;=</span> lower <span class="token operator">&amp;&amp;</span> n <span class="token operator">&lt;</span> upper<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<hr>
+<p><strong>Problem Title:</strong> Is the Number a Repdigit<br>
+<strong>Author:</strong> <a href="https://edabit.com/user/KcpfY4XZ7fNamyLd3">Eduard Diakunenko</a><br>
+<strong>Solution:</strong></p>
+<pre class=" language-javascript"><code class="prism  language-javascript"><span class="token keyword">function</span> <span class="token function">isRepdigit</span><span class="token punctuation">(</span>num<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token keyword">new</span> <span class="token class-name">Set</span><span class="token punctuation">(</span><span class="token function">String</span><span class="token punctuation">(</span>num<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">.</span>size <span class="token operator">===</span> <span class="token number">1</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<hr>
+<p><strong>Problem Title:</strong> Volume of a Cone<br>
+<strong>Author:</strong> <a href="https://edabit.com/user/Akq3fQcPRgPrWfsye">Ruud Peter Boelens</a><br>
+<strong>Solution:</strong></p>
+<pre class=" language-javascript"><code class="prism  language-javascript"><span class="token keyword">function</span> <span class="token function">coneVolume</span><span class="token punctuation">(</span>h<span class="token punctuation">,</span> r<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token operator">+</span><span class="token punctuation">(</span>Math<span class="token punctuation">.</span>PI <span class="token operator">*</span> r <span class="token operator">*</span> r <span class="token operator">*</span> h <span class="token operator">/</span> <span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">toFixed</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<hr>
+<p><strong>Problem Title:</strong> Square Every Digit<br>
+<strong>Author:</strong> <a href="https://edabit.com/user/Nc23QyxhdeFRwzj5W">Enkuryo</a><br>
+<strong>Solution:</strong></p>
+<pre class=" language-javascript"><code class="prism  language-javascript"><span class="token keyword">function</span> <span class="token function">squareDigits</span><span class="token punctuation">(</span>n<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token operator">+</span><span class="token function">String</span><span class="token punctuation">(</span>n<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">split</span><span class="token punctuation">(</span><span class="token string">''</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span>digit <span class="token operator">=&gt;</span> digit <span class="token operator">*</span> digit<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">join</span><span class="token punctuation">(</span><span class="token string">''</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<hr>
+<p><strong>Problem Title:</strong> Folding a Piece of Paper<br>
+<strong>Author:</strong> <a href="https://edabit.com/user/rgmhomEQqsnngdSJZ">mkjlong</a><br>
+<strong>Solution:</strong></p>
+<pre class=" language-javascript"><code class="prism  language-javascript"><span class="token keyword">function</span> <span class="token function">numLayers</span><span class="token punctuation">(</span>n<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token template-string"><span class="token string">`</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span><span class="token number">0.0005</span> <span class="token operator">*</span> Math<span class="token punctuation">.</span><span class="token function">pow</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span> n<span class="token punctuation">)</span><span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">m`</span></span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<hr>
+<p><strong>Problem Title:</strong> Algebra Sequence — Boxes<br>
+<strong>Author:</strong> <a href="https://edabit.com/user/Akq3fQcPRgPrWfsye">Ruud Peter Boelens</a><br>
+<strong>Solution:</strong></p>
+<pre class=" language-javascript"><code class="prism  language-javascript"><span class="token keyword">function</span> <span class="token function">boxSeq</span><span class="token punctuation">(</span>step<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> step <span class="token operator">%</span> <span class="token number">2</span> <span class="token operator">===</span> <span class="token number">0</span> <span class="token operator">?</span> step <span class="token punctuation">:</span> step <span class="token operator">+</span> <span class="token number">2</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<hr>
+<p><strong>Problem Title:</strong> Move Capital Letters to the Front<br>
+<strong>Author:</strong> <a href="https://edabit.com/user/mNMQvcxKSSvqqMYCH">Helen Yu</a><br>
+<strong>Solution:</strong></p>
+<pre class=" language-javascript"><code class="prism  language-javascript"><span class="token keyword">function</span> <span class="token function">capToFront</span><span class="token punctuation">(</span>s<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> capitalLetters <span class="token operator">=</span> s<span class="token punctuation">.</span><span class="token function">match</span><span class="token punctuation">(</span><span class="token regex">/[A-Z]/g</span><span class="token punctuation">)</span> <span class="token operator">||</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token keyword">const</span> restLetters <span class="token operator">=</span> s<span class="token punctuation">.</span><span class="token function">replace</span><span class="token punctuation">(</span><span class="token regex">/[A-Z]/g</span><span class="token punctuation">,</span> <span class="token string">''</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> capitalLetters<span class="token punctuation">.</span><span class="token function">join</span><span class="token punctuation">(</span><span class="token string">''</span><span class="token punctuation">)</span> <span class="token operator">+</span> restLetters<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<hr>
+<p><strong>Problem Title:</strong> 25-Mile Marathon<br>
+<strong>Author:</strong> <a href="https://edabit.com/user/Nb6LYPoQP6KJZt8mz">BijogFc24</a><br>
+<strong>Solution:</strong></p>
+<pre class=" language-javascript"><code class="prism  language-javascript"><span class="token keyword">function</span> <span class="token function">marathonDistance</span><span class="token punctuation">(</span>d<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> d<span class="token punctuation">.</span><span class="token function">reduce</span><span class="token punctuation">(</span><span class="token punctuation">(</span>acc<span class="token punctuation">,</span> curr<span class="token punctuation">)</span> <span class="token operator">=&gt;</span> acc <span class="token operator">+</span> Math<span class="token punctuation">.</span><span class="token function">abs</span><span class="token punctuation">(</span>curr<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token operator">===</span> <span class="token number">25</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<hr>
+<p><strong>Problem Title:</strong> Currying Functions<br>
+<strong>Author:</strong> <a href="https://edabit.com/user/T6iBEE2jp7f7iEF2P">Mubashir Hassan</a><br>
+<strong>Solution:</strong></p>
+<pre class=" language-javascript"><code class="prism  language-javascript"><span class="token keyword">function</span> <span class="token function">multiply</span><span class="token punctuation">(</span>arr<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token keyword">function</span> <span class="token punctuation">(</span>num<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> arr<span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span>x <span class="token operator">=&gt;</span> x <span class="token operator">*</span> num<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<hr>
+</div>
+</body>
+
+</html>
